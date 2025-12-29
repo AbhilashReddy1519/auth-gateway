@@ -1,0 +1,45 @@
+{
+  "name": "auth-gateway",
+  "version": "1.0.0",
+  "description": "Full Stack Gate-Way for Authentication and Authorization Authentication Traditional - User Friendly",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec tsx src/server.ts",
+    "build": "tsc",
+    "start": "nodemon dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhilashReddy1519/auth-gateway.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/AbhilashReddy1519/auth-gateway/issues"
+  },
+  "homepage": "https://github.com/AbhilashReddy1519/auth-gateway#readme",
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.0.3",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.2",
+    "zod": "^4.2.1"
+  }
+}
