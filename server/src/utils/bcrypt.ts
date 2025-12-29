@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt';
+import bcrypt from "bcrypt";
 
 const SALT_ROUNDS = 12;
 
@@ -15,5 +15,12 @@ export async function comparePassword(
 	plainTextPassword: string,
 	hashedPassword: string,
 ): Promise<boolean> {
-	return bcrypt.compare(plainTextPassword, hashedPassword);
+	try {
+		const result = await bcrypt.compare(plainTextPassword, hashedPassword);
+		console.log("bcrypt.compare result:", result);
+		return result;
+	} catch (error) {
+		console.error("Password comparison error:", error);
+		throw new Error("Password comparison failed");
+	}
 }

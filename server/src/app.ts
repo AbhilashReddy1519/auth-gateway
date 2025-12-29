@@ -3,6 +3,7 @@ import type { Express, Request, Response, NextFunction } from "express";
 import cors from "cors";
 import { PORT } from "./config/index.js";
 import helmet from "helmet";
+import routes from "./routes/index.route.js";
 
 const app: Express = express();
 
@@ -15,6 +16,9 @@ app.use(
 	}),
 );
 app.use(helmet());
+
+// Mount all application routes
+app.use("/", routes);
 
 app.get("/server/health", (req: Request, res: Response) => {
 	const health = {
